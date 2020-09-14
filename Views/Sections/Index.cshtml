@@ -1,0 +1,47 @@
+﻿@model IEnumerable<NickCollege.Models.Section>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Classroom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Classroom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SectionID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SectionID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SectionID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

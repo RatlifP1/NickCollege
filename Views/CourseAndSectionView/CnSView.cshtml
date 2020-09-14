@@ -1,0 +1,29 @@
+﻿@using NickCollege.Controllers;
+@model IEnumerable<NickCollege.Models.StudentViewModel>
+
+
+
+<h2>Student Report</h2>
+
+
+
+<table class="table table-striped">
+
+    <tr>
+        <td>Location </td>
+        <td>Course Name</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+<tr>
+    <td>@item.SectionVm.Location => Location</td>
+
+    <td>@item.CourseInfoVm.CourseName</td>
+    <td>Location </td>
+    <td>Course Name</td>
+</tr>
+
+    }
+</table>

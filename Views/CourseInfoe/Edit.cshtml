@@ -1,0 +1,99 @@
+﻿@model NickCollege.Models.CourseInfo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>CourseInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CourseID" />
+            <div class="form-group">
+                <label asp-for="CourseName" class="control-label"></label>
+                <input asp-for="CourseName" class="form-control" />
+                <span asp-validation-for="CourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseDescribtion" class="control-label"></label>
+                <input asp-for="CourseDescribtion" class="form-control" />
+                <span asp-validation-for="CourseDescribtion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Credits" class="control-label"></label>
+                <input asp-for="Credits" class="form-control" />
+                <span asp-validation-for="Credits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade1" class="control-label"></label>
+                <input asp-for="grade1" class="form-control" />
+                <span asp-validation-for="grade1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade2" class="control-label"></label>
+                <input asp-for="grade2" class="form-control" />
+                <span asp-validation-for="grade2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade3" class="control-label"></label>
+                <input asp-for="grade3" class="form-control" />
+                <span asp-validation-for="grade3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade4" class="control-label"></label>
+                <input asp-for="grade4" class="form-control" />
+                <span asp-validation-for="grade4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade5" class="control-label"></label>
+                <input asp-for="grade5" class="form-control" />
+                <span asp-validation-for="grade5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade6" class="control-label"></label>
+                <input asp-for="grade6" class="form-control" />
+                <span asp-validation-for="grade6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade7" class="control-label"></label>
+                <input asp-for="grade7" class="form-control" />
+                <span asp-validation-for="grade7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade8" class="control-label"></label>
+                <input asp-for="grade8" class="form-control" />
+                <span asp-validation-for="grade8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade9" class="control-label"></label>
+                <input asp-for="grade9" class="form-control" />
+                <span asp-validation-for="grade9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="grade10" class="control-label"></label>
+                <input asp-for="grade10" class="form-control" />
+                <span asp-validation-for="grade10" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="average" class="control-label"></label>
+                <input asp-for="average" class="form-control" />
+                <span asp-validation-for="average" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

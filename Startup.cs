@@ -28,7 +28,7 @@ namespace NickCollege
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            
 
             services.AddDbContext<CourseInfoDbContext>(options => //binds the model cog wheel to connect the sql
                     options.UseSqlServer(Configuration.GetConnectionString("CourseInfoDbContext")));
@@ -36,9 +36,9 @@ namespace NickCollege
             services.AddDbContext<SectionDbContext>(options => //binds the model cog wheel to connect the sql
                     options.UseSqlServer(Configuration.GetConnectionString("SectionDbContext")));
 
+            services.AddRazorPages();
 
 
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

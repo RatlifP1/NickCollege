@@ -71,12 +71,11 @@ namespace NickCollege.Areas.Identity.Pages.Account
             [PersonalData]
             [Display(Name = "Student")]
              public string Student { get; set; }
-            
 
-            [Display(Name = "StudentID")]
-           public int StudentID { get; set; }
 
-      
+     
+
+
 
             [Required]
             [EmailAddress]
@@ -107,9 +106,10 @@ namespace NickCollege.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { StudentID = Input.StudentID,  UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, 
+                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, 
                     LastName = Input.LastName, Admin = Input.Admin, Teacher = Input.Teacher, Student = Input.Student,
-                    };
+                    
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

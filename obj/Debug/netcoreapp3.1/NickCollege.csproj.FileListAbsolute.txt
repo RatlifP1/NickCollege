@@ -205,3 +205,5 @@ C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcorea
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.dll
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.pdb
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.genruntimeconfig.cache
+C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.csprojAssemblyReference.cache
+C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\Razor\Views\ResultSet\GetCourseVMSectionVM.cshtml.g.cs

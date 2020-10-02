@@ -1,17 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
-
-<p>Use this page to detail your site's privacy policy.</p>
-@model NickCollege.Models.ResultSetViewModel
+﻿@model NickCollege.Models.ResultSetViewModel
 <h2>Student view page</h2>
 <h1>Course test</h1>
 <table style="border:solid 2px;">
     <tr>
         <td>
             @*@ViewBag.CourseVM.CourseName*@
-            @Html.DisplayFor(m => m.CourseVM.CourseName)
+            @Html.DisplayFor(model => model.CourseVM.CourseName) 
         </td>
     </tr>
 </table>
@@ -20,7 +14,7 @@
     <tr>
         <td>
             @*@ViewBag.SectionVM.Location*@
-            @Html.DisplayFor(m => m.SectionVM.Location)
+            @Html.DisplayFor(model => model.SectionVM.Location) 
         </td>
     </tr>
 </table>

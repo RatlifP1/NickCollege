@@ -14,8 +14,8 @@ namespace NickCollege.Models
         
         //CourseAndSectionViewController
     {
-           public CourseInfo CourseInfoVm { get; set; }
-            public Section SectionVm { get; set; }
+           //public CourseInfo CourseInfoVm { get; set; }
+           // public Section SectionVm { get; set; }
     }
 }
 

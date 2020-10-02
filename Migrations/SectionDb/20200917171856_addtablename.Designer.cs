@@ -9,7 +9,7 @@ using NickCollege.InfoData;
 namespace NickCollege.Migrations.SectionDb
 {
     [DbContext(typeof(SectionDbContext))]
-    [Migration("20200912234328_addtablename")]
+    [Migration("20200917171856_addtablename")]
     partial class addtablename
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,6 +29,9 @@ namespace NickCollege.Migrations.SectionDb
 
                     b.Property<string>("Classroom")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FK_CourseID")
+                        .HasColumnType("int");
 
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");

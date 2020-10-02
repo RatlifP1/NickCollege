@@ -12,11 +12,7 @@ namespace NickCollege.Areas.Identity.Data
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class ApplicationUser : IdentityUser
     {
-        public ApplicationUser()
-        {
-     this.Section = new HashSet<Section>();
-   }
-
+       
 
     [PersonalData]
         [Column(TypeName = "nvarchar(100)")]
@@ -38,7 +34,14 @@ namespace NickCollege.Areas.Identity.Data
         [Column(TypeName = "nvarchar(10)")]
 
 
-       public int StudentID { get; set; }
-        public virtual ICollection<Section> Section { get; set; }
+        public int StudentID { get; set; }
+        [ForeignKey("StudentID")]
+        public Section SectionID { get; set; }
+
+
+
+
+
+
     }
 }

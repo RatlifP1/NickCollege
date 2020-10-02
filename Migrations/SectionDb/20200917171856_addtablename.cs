@@ -14,7 +14,8 @@ namespace NickCollege.Migrations.SectionDb
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Location = table.Column<string>(nullable: true),
                     Classroom = table.Column<string>(nullable: true),
-                    StartDate = table.Column<string>(nullable: true)
+                    StartDate = table.Column<string>(nullable: true),
+                 
                 },
                 constraints: table =>
                 {

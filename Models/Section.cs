@@ -29,7 +29,5 @@ namespace NickCollege.Models
         public string StartDate { get; set; }
 
 
-       public int StudentID { get; set; }
-        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

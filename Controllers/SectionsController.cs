@@ -23,7 +23,7 @@ namespace NickCollege.Controllers
         // GET: Sections
         public async Task<IActionResult> Index()
         {
-            dynamic section = ViewBag.Section;
+            //dynamic section = ViewBag.Section;
             return View(await _context.Section.ToListAsync());
         }
 

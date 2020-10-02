@@ -1,11 +1,12 @@
-﻿@model NickCollege.Models.ResultSetViewModel
+﻿@model ResultSetViewModel
+
 <h2>Student view page</h2>
 <h1>Course test</h1>
 <table style="border:solid 2px;">
     <tr>
         <td>
-            @*@ViewBag.CourseVM.CourseName*@
-            @Html.DisplayFor(model => model.CourseVM.CourseName) 
+            @Model.CourseVM.CourseName
+            @* @Html.DisplayFor(model => model.CourseVM.CourseName)*@
         </td>
     </tr>
 </table>
@@ -13,8 +14,8 @@
 <table style="border:solid 2px;">
     <tr>
         <td>
-            @*@ViewBag.SectionVM.Location*@
-            @Html.DisplayFor(model => model.SectionVM.Location) 
+            @Model.SectionVM.Location
+            @*@Html.DisplayFor(model => model.SectionVM.Location)*@
         </td>
     </tr>
 </table>

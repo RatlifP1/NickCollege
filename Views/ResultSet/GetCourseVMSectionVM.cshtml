@@ -2,20 +2,77 @@
 
 <h2>Student view page</h2>
 <h1>Course test</h1>
-<table style="border:solid 2px;">
-    <tr>
-        <td>
-            @Model.CourseVM.CourseName
-            @* @Html.DisplayFor(model => model.CourseVM.CourseName)*@
-        </td>
-    </tr>
+
+
+
+<table class="greenTable">
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Course Describtion</th>
+            <th>Credits</th>
+            <th>Grade 1</th>
+            <th>Grade 2</th>
+            <th>Grade 3</th>
+            <th>Grade 4</th>
+            <th>Grade 5</th>
+            <th>Grade 6</th>
+            <th>Grade 7</th>
+            <th>Grade 8</th>
+            <th>Average</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.CourseVM.CourseName</td>
+            <td>@Model.CourseVM.CourseDescribtion</td>
+            <td>@Model.CourseVM.Credits</td>
+            <td>@Model.CourseVM.grade1</td>
+            <td>@Model.CourseVM.grade2</td>
+            <td>@Model.CourseVM.grade3</td>
+            <td>@Model.CourseVM.grade4</td>
+            <td>@Model.CourseVM.grade5</td>
+            <td>@Model.CourseVM.grade6</td>
+            <td>@Model.CourseVM.grade7</td>
+            <td>@Model.CourseVM.grade8</td>
+            <td>@Model.CourseVM.average</td>
+        </tr>
+    </tbody>
 </table>
+
+
+
 <h2>Section test</h2>
-<table style="border:solid 2px;">
+
+
+<table class="Section" style="border:solid 2px;">
     <tr>
         <td>
             @Model.SectionVM.Location
-            @*@Html.DisplayFor(model => model.SectionVM.Location)*@
+        </td>
+        <td>
+            @Model.SectionVM.Classroom
+        </td>
+        <td>
+            @Model.SectionVM.StartDate
         </td>
     </tr>
 </table>
+
+
+
+
+
+       
+
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        
+        

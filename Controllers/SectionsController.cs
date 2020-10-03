@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NickCollege.InfoData;
-using System.Dynamic;
 using NickCollege.Models;
 
 namespace NickCollege.Controllers
@@ -23,7 +22,6 @@ namespace NickCollege.Controllers
         // GET: Sections
         public async Task<IActionResult> Index()
         {
-            //dynamic section = ViewBag.Section;
             return View(await _context.Section.ToListAsync());
         }
 

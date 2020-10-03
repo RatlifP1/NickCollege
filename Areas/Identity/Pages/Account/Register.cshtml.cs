@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -70,12 +69,7 @@ namespace NickCollege.Areas.Identity.Pages.Account
            
             [PersonalData]
             [Display(Name = "Student")]
-             public string Student { get; set; }
-
-
-     
-
-
+            public string Student { get; set; }
 
             [Required]
             [EmailAddress]
@@ -107,9 +101,7 @@ namespace NickCollege.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, 
-                    LastName = Input.LastName, Admin = Input.Admin, Teacher = Input.Teacher, Student = Input.Student,
-                    
-                };
+                    LastName = Input.LastName, Admin = Input.Admin, Teacher = Input.Teacher, Student = Input.Student };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

@@ -4,23 +4,3 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
-@model NickCollege.Models.ResultSetViewModel
-<h2>Student view page</h2>
-<h1>Course test</h1>
-<table style="border:solid 2px;">
-    <tr>
-        <td>
-            @*@ViewBag.CourseVM.CourseName*@
-            @Html.DisplayFor(m => m.CourseVM.CourseName)
-        </td>
-    </tr>
-</table>
-<h2>Section test</h2>
-<table style="border:solid 2px;">
-    <tr>
-        <td>
-            @*@ViewBag.SectionVM.Location*@
-            @Html.DisplayFor(m => m.SectionVM.Location)
-        </td>
-    </tr>
-</table>

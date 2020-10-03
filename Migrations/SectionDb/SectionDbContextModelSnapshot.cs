@@ -28,9 +28,6 @@ namespace NickCollege.Migrations.SectionDb
                     b.Property<string>("Classroom")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("FK_CourseID")
-                        .HasColumnType("int");
-
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 

@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using DocumentFormat.OpenXml.Wordprocessing;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,24 +7,13 @@ using System.Threading.Tasks;
 using NickCollege.Controllers;
 using Microsoft.Extensions.WebEncoders;
 using System.Data;
-using System.Data.SqlClient;
-
-using System.Dynamic;
-using NickCollege.Areas.Identity.Data;
-using NickCollege.Areas.Identity.Pages.Account;
-using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NickCollege.Models
 {
 
-    public class CourseInfo : ApplicationUser
+    public class CourseInfo /*: GradeAndAvgController*/
     {
-        //public ApplicationUser()
-        //{
-        //    this.StudentID = new HashSet<StudentID>();
-        //}
-
-
         [Key] public int CourseID { get; set; }
         public string CourseName { get; set; }
         public string CourseDescribtion { get; set; }
@@ -43,7 +31,6 @@ namespace NickCollege.Models
         public double grade9 { get; set; }
         public double grade10 { get; set; }
         public double average { get; set; }
-
-
+   
     }
 }

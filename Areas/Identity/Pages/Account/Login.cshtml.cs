@@ -72,7 +72,6 @@ namespace NickCollege.Areas.Identity.Pages.Account
             ReturnUrl = returnUrl;
         }
 
-
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");

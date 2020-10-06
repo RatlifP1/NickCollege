@@ -566,7 +566,6 @@ C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\bin\Debug\netcorea
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.csprojAssemblyReference.cache
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.AssemblyInfoInputs.cache
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.AssemblyInfo.cs
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.csproj.CoreCompileInputs.cache
@@ -612,3 +611,4 @@ C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcorea
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.dll
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.pdb
 C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.genruntimeconfig.cache
+C:\Users\kirkv\OneDrive\Desktop\Blank Login tests\NickCollege\obj\Debug\netcoreapp3.1\NickCollege.csprojAssemblyReference.cache

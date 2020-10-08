@@ -2,12 +2,13 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-    white-space: normal;
+   /* white-space: normal;*/
     text-align: center;
     word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
+
+ Provide sufficient contrast against white background 
 a {
     color: #0366d6;
 }
@@ -21,10 +22,10 @@ a {
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
     background-color: #1b6ec2;
-    border-color: #1861ac;
+    border-color: #1861ac; /*#FFD700;*/
 }
-
-/* Sticky footer styles
+/*
+ Sticky footer styles
 -------------------------------------------------- */
 html {
     font-size: 14px;
@@ -36,9 +37,9 @@ html {
     }
 }
 
-.border-top {
-    border-top: 1px solid #e5e5e5;
-}
+/*.border-top {
+    border-top: 1px solid 	#FFD700;
+}*/
 
 .border-bottom {
     border-bottom: 1px solid #e5e5e5;
@@ -63,6 +64,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
+    background-color: #FAFAD2
 }
 
 .footer {
@@ -193,4 +195,15 @@ table.greenTable tfoot .links a {
             padding: 2px 8px;
             border-radius: 5px;
 }
-/******Section Table************************************************************/
+/******Students View************************************************************/
+
+.container {
+    font-family: Georgia, serif;
+
+    background-color: #D4EED1;
+
+    text-align: center;
+}
+.boarder {
+    background-color: #FAFAD2
+}

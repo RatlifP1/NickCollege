@@ -7,30 +7,36 @@ using System.Threading.Tasks;
 using NickCollege.Controllers;
 using Microsoft.Extensions.WebEncoders;
 using System.Data;
+using NickCollege.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Routing;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NickCollege.Models
 {
+    public enum Grade
+    {
+        A , B, C, D, F
+    }
 
     public class CourseInfo /*: GradeAndAvgController*/
     {
-        [Key] public int CourseID { get; set; }
-        public string CourseName { get; set; }
+        
+        
+    [Key] public int CourseID { get; set; }
+      
+    public string CourseName { get; set; }
         public string CourseDescribtion { get; set; }
 
         public int Credits { get; set; }
 
-        public double grade1 { get; set; }
-        public double grade2 { get; set; }
-        public double grade3 { get; set; }
-        public double grade4 { get; set; }
-        public double grade5 { get; set; }
-        public double grade6 { get; set; }
-        public double grade7 { get; set; }
-        public double grade8 { get; set; }
-        public double grade9 { get; set; }
-        public double grade10 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? Grade { get; set; }
+
         public double average { get; set; }
-   
+
+
+      
+
     }
 }

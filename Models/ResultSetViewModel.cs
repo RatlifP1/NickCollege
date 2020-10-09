@@ -11,5 +11,11 @@ namespace NickCollege.Models
     {
         public CourseInfo CourseVM { get; set; }
         public Section SectionVM { get; set; }
+
+
+
+
+
+
     }
 }

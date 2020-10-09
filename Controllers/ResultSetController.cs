@@ -29,12 +29,6 @@ namespace NickCollege.Controllers
             return View(model);
         }
 
-        //public ActionResult GetBlogComment()
-        //{
-        //    ResultSetViewModel CSVM = new ResultSetViewModel();
-        //    CSVM.CourseVM = GetCourseVM();
-        //    CSVM.SectionVM = GetSectionVM();
-        //    return View(CSVM);
-        //}
+
     }
 }

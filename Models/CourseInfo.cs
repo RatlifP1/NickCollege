@@ -11,6 +11,7 @@ using NickCollege.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Routing;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace NickCollege.Models
 {
@@ -31,12 +32,28 @@ namespace NickCollege.Models
         public int Credits { get; set; }
 
         [DisplayFormat(NullDisplayText = "No grade")]
-        public Grade? Grade { get; set; }
+        public Grade? grade1 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? grade2 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? grade3 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? grade4 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? grade5 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? grade6 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? grade7 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? grade8 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? grade9 { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
+        public Grade? grade10 { get; set; }
+
 
         public double average { get; set; }
-
-
-      
 
     }
 }

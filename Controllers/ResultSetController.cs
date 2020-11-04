@@ -6,78 +6,71 @@ using System.Threading.Tasks;
 using NickCollege.Models;
 using NickCollege.InfoData;
 using NickCollege.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using NickCollege.Areas.Identity.Data;
 
 namespace NickCollege.Controllers
 {
+
     public class ResultSetController : Controller
     {
-        CourseInfoDbContext cidb;
-        SectionDbContext sdb;
-        //AuthDbContext adbc;
 
-        public ResultSetController(CourseInfoDbContext cidb, SectionDbContext sdb/*   , AuthDbContext adbc*/)
+
+        private AuthDbContext _userManager;
+        public ResultSetController(AuthDbContext userManager)
         {
-            this.cidb = cidb;
-            this.sdb = sdb;
-            //this.adbc = adbc;
+            _userManager = userManager;
         }
-    
-        /***********************************************************************************************************/
+        public IActionResult UserView()
+        {
+            ViewData["Message"] = "Your application describtion page.";
+            return View(_userManager.Users.ToList());
+        }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
+        ////CourseInfoDbContext cidb;
+        ////SectionDbContext sdb;
+        //AuthDbContext authdc;
+
+        //public ResultSetController(/*CourseInfoDbContext cidb, SectionDbContext sdb, */AuthDbContext authdc)
+        //{
+        //    //this.cidb = cidb;
+        //    //this.sdb = sdb;
+        //    this.authdc = authdc;
+        //}
+
+
+
+
         //private readonly UserManager<ApplicationUser> userManager;
 
         //public ResultSetController(UserManager<ApplicationUser> userManager)
         //{
         //    this.userManager = userManager;
         //}
-        /***************************************************************************************************************/
-
-        [HttpGet]
-        public ActionResult GetCourseVMSectionVM()
-        {
-            //var users = userManager.Users;
-
-            var CourseInfoVM = cidb.CourseInfo.First();
-           var SectionVM = sdb.Section.First();
-            
-            var model = new ResultSetViewModel { CourseVM = CourseInfoVM, SectionVM = SectionVM };
-            
-            return View(model);
-        }
 
 
-        //private readonly UserManager<ApplicationUser> userManager;
 
-        //public ResultSetController(UserManager<ApplicationUser> userManager)
+
+
+
+
+
+        //public ActionResult GetCourseVMSectionVM()
         //{
-        //    this.userManager = userManager;
-        //}
 
-        //[HttpGet]
-        //public IActionResult ListUsers()
-        //{
-        //    var users = userManager.Users;
-        //    return View(users, model);
-        //}
+        //    //var users = userManager.Users;
+        //    //var CourseInfoVM = cidb.CourseInfo.First();
+        //    //    var SectionVM = sdb.Section.First();
+        //    //var ApplicationUser = authdc._userManager;
 
-        //public ActionResult GetView(string customerID, string viewName)
-        //{
-        //    object model = null;
-        //    if (viewName == "CustomerDetails")
-        //    {
-        //        using AuthDbContext db = new AuthDbContext();
-        //        model = db.userManager.Find(customerID);
-        //    }
-        //    if (viewName == "OrderDetails")
-        //    {
-        //        using (NorthwindEntities db = new NorthwindEntities())
-        //        {
-        //            model = db.Orders.Where(o => o.CustomerID == customerID)
-        //                      .OrderBy(o => o.OrderID).ToList();
-        //        }
-        //    }
-        //    return PartialView(users, model);
+        //    //var model = new ResultSetViewModel { /*CourseVM = CourseInfoVM, SectionVM = SectionVM,*/ _userManager = (UserManager<ApplicationUser>)ApplicationUser };
+
+        //    return View();
+        //    //return View(model);
         //}
     }
 }

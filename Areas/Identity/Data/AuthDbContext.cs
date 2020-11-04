@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using NickCollege.Controllers;
 using NickCollege.Areas.Identity.Data;
 
 namespace NickCollege.Data
 {
     public class AuthDbContext : IdentityDbContext<ApplicationUser>
     {
+       
+
         public AuthDbContext(DbContextOptions<AuthDbContext> options)
             : base(options)
         {

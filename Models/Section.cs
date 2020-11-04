@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using NickCollege.Controllers;
 using Microsoft.Extensions.WebEncoders;
 using System.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace NickCollege.Models
 {
@@ -22,6 +23,6 @@ namespace NickCollege.Models
         //[DataType(DateTime)]
         public string StartDate { get; set; }
 
-        public int? FK_UserID { get; set; }
+
     }
 }

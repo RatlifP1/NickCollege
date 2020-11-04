@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace NickCollege.Models
 {
 
-    public class CourseInfo /*: GradeAndAvgController*/
+    public class CourseInfo 
     {
         [Key] public int CourseID { get; set; }
         public string CourseName { get; set; }
@@ -31,6 +31,8 @@ namespace NickCollege.Models
         public double grade9 { get; set; }
         public double grade10 { get; set; }
         public double average { get; set; }
-   
+
+        public int? FK_UserID { get; set; }
+
     }
 }

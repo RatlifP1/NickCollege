@@ -46,11 +46,16 @@
         <input asp-for="Input.ConfirmPassword" class="form-control" />
         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
     </div>
- 
+    <div class="form-group">
+        <label asp-for="Input.StudentID"></label>
+        <input asp-for="Input.StudentID" class="form-control" />
+        <span asp-validation-for="Input.StudentID" class="text-danger"></span>
+    </div>
+
     <!table>
         <tr>
             <td>
-                <input type="radio" id="tyu" name="Input.Admin" value="1123ASDGsdf123sdf"> 
+                <input type="radio" id="tyu" name="Input.Admin" value="1123ASDGsdf123sdf">
                 <label for="Input.Admin">Admin</label>
             </td>
         </tr>
@@ -68,10 +73,29 @@
                 <label for="Input.Student">Student</label>
             </td>
         </tr>
+
+
     </!table>
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
 
+<script>
+
+    function random() {
+        document.getElementById("number").innerHTML = Math.floor(Math.random * (Get) * 100);
+    }
+
+
+</script>
+
+
+
+
+
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+
+
+
+
 }

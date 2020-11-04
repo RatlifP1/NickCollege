@@ -22,6 +22,7 @@ namespace NickCollege.Controllers
         // GET: CourseInfoe
         public async Task<IActionResult> Index()
         {
+            var section = _context.CourseInfo.Include(d => d.FK_UserID);
             return View(await _context.CourseInfo.ToListAsync());
         }
 

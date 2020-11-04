@@ -27,6 +27,6 @@ namespace NickCollege.Areas.Identity.Data
         [Column(TypeName = "nvarchar(100)")]
         public string Student { get; set; }
 
-
+        public int StudentID { get; set; }
     }
 }

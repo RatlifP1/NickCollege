@@ -21,5 +21,7 @@ namespace NickCollege.Models
 
         //[DataType(DateTime)]
         public string StartDate { get; set; }
+
+        public int? FK_UserID { get; set; }
     }
 }

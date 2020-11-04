@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Office2010.Excel;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -86,6 +87,10 @@ namespace NickCollege.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Display(Name = "Student ID")]
+            public int StudentID { get; set; }
+
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -101,7 +106,10 @@ namespace NickCollege.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, 
-                    LastName = Input.LastName, Admin = Input.Admin, Teacher = Input.Teacher, Student = Input.Student };
+                    LastName = Input.LastName, Admin = Input.Admin, Teacher = Input.Teacher, Student = Input.Student,
+                    StudentID = Input.StudentID
+                    
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

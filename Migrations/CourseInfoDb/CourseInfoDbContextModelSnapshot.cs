@@ -35,10 +35,7 @@ namespace NickCollege.Migrations.CourseInfoDb
                     b.Property<int>("Credits")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SectionID")
-                        .HasColumnType("int");
-
-                    b.Property<double>("average")
+                   b.Property<double>("average")
                         .HasColumnType("float");
 
                     b.Property<double>("grade1")

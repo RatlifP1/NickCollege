@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NickCollege.InfoData;
 using NickCollege.Models;
@@ -22,10 +20,10 @@ namespace NickCollege.Controllers
         // GET: CourseInfoe
         public async Task<IActionResult> Index()
         {
-            var section = _context.CourseInfo.Include(d => d.FK_UserID);
+            
             return View(await _context.CourseInfo.ToListAsync());
         }
-
+        //
         // GET: CourseInfoe/Details/5
         public async Task<IActionResult> Details(int? id)
         {

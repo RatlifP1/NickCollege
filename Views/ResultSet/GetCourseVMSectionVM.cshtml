@@ -1,45 +1,91 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @using NickCollege.Areas.Identity.Data;
 
-
 @model ResultSetViewModel
-
-
-
-@inject SignInManager<ApplicationUser> signInManager;
-@inject UserManager<ApplicationUser> userManager;
+@*@inject SignInManager<ApplicationUser> signInManager;
+    @inject UserManager<ApplicationUser> userManager;*@
 @*@if (signInManager.IsSignedIn(User) && User.IsInRole("Student"))
     {*@
 
 
-@*@Html.LabelFor(m => m.Id)
-@Html.DropDownListFor(m => m.Id, Model.UserItems)
-@Html.ValidationMessageFor(m => m.Id)
-<input type="submit" value="Submit" />*@
+<html class="StudentsView">
 
-@*@(Html.Kendo().DropDownList()
-        .Name("dropdownlist")
-        .DataTextField("ProductName")
-        .DataValueField("ProductID")
-        .DataSource(source => {
-            source.Read(read =>
-            {
-                read.Action("Products_Read", "DropDownList");
-            });
-        })
-    )*@
+<head>
+
+</head>
+
+<body>
+    <h1>Welcome Leaping Frog</h1>
+    <h2>Course Information</h2>
+    <p>
+        In the course information you will see the course name and course describtion.<br />
+        For each course there is the amount of credits that you will earn after<br />
+        passing the course. Your grades and average are listed as well.<br />
+    </p>
+    <div>
+        <table class="greenTable">
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Course Describtion</th>
+                    <th>Credits</th>
+                    <th>Grade 1</th>
+                    <th>Grade 2</th>
+                    <th>Grade 3</th>
+                    <th>Grade 4</th>
+                    <th>Grade 5</th>
+                    <th>Grade 6</th>
+                    <th>Grade 7</th>
+                    <th>Grade 8</th>
+                    <th>Average</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.CourseVM.CourseName</td>
+                    <td>@Model.CourseVM.CourseDescribtion</td>
+                    <td>@Model.CourseVM.Credits</td>
+                    <td>@Model.CourseVM.grade1</td>
+                    <td>@Model.CourseVM.grade2</td>
+                    <td>@Model.CourseVM.grade3</td>
+                    <td>@Model.CourseVM.grade4</td>
+                    <td>@Model.CourseVM.grade5</td>
+                    <td>@Model.CourseVM.grade6</td>
+                    <td>@Model.CourseVM.grade7</td>
+                    <td>@Model.CourseVM.grade8</td>
+                    <td>@Model.CourseVM.average</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Section Information</h2>
+        <p>
+            The section information<br />
+            provides information of where and when the class you have been registered<br />
+            for is located along with the start date.
+        </p>
+        <table class="greenSection">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Classroom</th>
+                    <th>Start Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.SectionVM.Location</td>
+                    <td>@Model.SectionVM.Classroom</td>
+                    <td>@Model.SectionVM.StartDate</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
 
 
 
-
-
-
-
-
-
-
-
-<li class="nav-item dropdown">
+<!--<li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Student
@@ -50,108 +96,5 @@
         <a class="dropdown-item" asp-controller="Administration"
            asp-action="ListRoles">Roles</a>
     </div>
-</li>
+</li>-->
 @*}*@
-
-
-
-
-
-
-@*<html class="StudentsView">
-
-    <head>
-
-    </head>
-
-    <body>
-        <h1>Welcome Leaping Frog</h1>
-        <h2>Course Information</h2>
-        <p>
-            In the course information you will see the course name and course describtion.<br />
-            For each course there is the amount of credits that you will earn after<br />
-            passing the course. Your grades and average are listed as well.<br />
-        </p>
-
-        <p>
-            Below course information is the section information. The section information<br />
-            provides information of where and when the class you have been registered<br />
-            for is located along with the start date.
-        </p>*@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@*<div>
-            <table class="greenTable">
-                <thead>
-                    <tr>
-                        <th>Course Name</th>
-                        <th>Course Describtion</th>
-                        <th>Credits</th>
-                        <th>Grade 1</th>
-                        <th>Grade 2</th>
-                        <th>Grade 3</th>
-                        <th>Grade 4</th>
-                        <th>Grade 5</th>
-                        <th>Grade 6</th>
-                        <th>Grade 7</th>
-                        <th>Grade 8</th>
-                        <th>Average</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>@Model.CourseVM.CourseName</td>
-                        <td>@Model.CourseVM.CourseDescribtion</td>
-                        <td>@Model.CourseVM.Credits</td>
-                        <td>@Model.CourseVM.grade1</td>
-                        <td>@Model.CourseVM.grade2</td>
-                        <td>@Model.CourseVM.grade3</td>
-                        <td>@Model.CourseVM.grade4</td>
-                        <td>@Model.CourseVM.grade5</td>
-                        <td>@Model.CourseVM.grade6</td>
-                        <td>@Model.CourseVM.grade7</td>
-                        <td>@Model.CourseVM.grade8</td>
-                        <td>@Model.CourseVM.average</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h2>Section test</h2>
-            <table class="greenSection">
-                <thead>
-                    <tr>
-                        <th>Location</th>
-                        <th>Classroom</th>
-                        <th>Start Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>@Model.SectionVM.Location</td>
-                        <td>@Model.SectionVM.Classroom</td>
-                        <td>@Model.SectionVM.StartDate</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </body>
-    </html>*@
-
-
-

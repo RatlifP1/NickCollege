@@ -36,7 +36,8 @@ namespace NickCollege
             services.AddDbContext<SectionDbContext>(options => //binds the model cog wheel to connect the sql
                     options.UseSqlServer(Configuration.GetConnectionString("SectionDbContext")));
 
-
+            services.AddDistributedMemoryCache();
+            services.AddSession();
 
             
         }
@@ -56,7 +57,7 @@ namespace NickCollege
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
             app.UseAuthentication();
 

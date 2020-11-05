@@ -1,34 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NickCollege.InfoData;
 using NickCollege.Models;
-using Microsoft.AspNetCore.Identity;
-using NickCollege.Areas.Identity.Data;
-using System.Web.Providers.Entities;
-using DocumentFormat.OpenXml.InkML;
-using AspNetCore;
-using NickCollege.ViewModels;
+
 
 namespace NickCollege.Controllers
 {
     public class SectionsController : Controller
     {
-        private readonly UserManager<ApplicationUser> userManager;
-        public SectionsController(UserManager<ApplicationUser> userManager)
-        {
-            this.userManager = userManager;
-        }
-
-
-
-
-
         private readonly SectionDbContext _context;
 
         public SectionsController(SectionDbContext context)
@@ -36,85 +18,10 @@ namespace NickCollege.Controllers
             _context = context;
         }
 
-
-        //     if (Views_Administration_ListUsers User == FirstName && @user.LastName)
-        //{
-
-        //}
-
-        //private readonly UserManager<ApplicationUser> userManager;
-        //application = Context.Application.Include(x => x.FK_SectionID)
-        //     foreach (Application d in application)
-        //      {
-        //      foreach (Course c in d.Courses)
-        //      {
-        //      courseList.Add(d.Name + c.Title);
-        //      }
-
-
-     
-
-        //private readonly UserManager<ApplicationUser> FK_SectionID;
-        // GET: Sections
-        public async Task<IActionResult> Index()
-        {
-            //var users = userManager.Users;
-            //var viewModel = new InstructorIndexData();
-            //viewModel.users = Users.Include(i => i.OfficeAssignment).Include(i => i.Courses.Select(c => c.Department)).OrderBy(i => i.LastName);
-
-            //var section = _context.Section.Include(d => d.FK_UserID);
-
-
-            return View(await _context.Section.ToListAsync());
-        }
-        //    {
-        //        if(FK_SectionID != null)
-        //        {
-        //            return NotFound();
-        //        }
-
-
-        //        if (ModelState.IsValid)
-        //{
-        //    try
-        //    {
-        //                var section = await _context.Section
-        //            .FirstOrDefaultAsync(m => m.SectionID == id);
-        //                if (section == null)
-        //                {
-        //                    return NotFound();
-        //                }
-
-        //                return View(section);
-        //            }
-
-
-
-
-
-
-
-
-
-        /**********************************
-         * 
-         * orginal
-         * 
     public async Task<IActionResult> Index()
         {
             return View(await _context.Section.ToListAsync());
         }
-***********************************************************/
-
-
-
-
-
-
-
-
-
-
 
         // GET: Sections/Details/5
         public async Task<IActionResult> Details(int? id)
